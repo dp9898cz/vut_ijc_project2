@@ -9,5 +9,9 @@ tail: tail.o
 tail.o: tail.c
 	$(C) -c tail.c -o tail.o
 
+#libhtab.a (static library)
+libhtab: 
+
+#clean
 clean: 
 	rm -f *.o tail
