@@ -1,0 +1,30 @@
+I have seen many posts but didn't find something like i want.
+I am getting wrong output :
+
+ÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿÿ......  // may be this is EOF character
+Going into infinite loop.
+
+My algorithm:
+
+Go to end of file.
+decrease position of pointer by 1 and read character by character.
+exit if we found our 10 lines or we reach beginning of file.
+now i will scan the full file till EOF and print them //not implemented in code.
+code:
+
+#include<iostream>
+#include<stdio.h>
+#include<conio.h>
+#include<stdlib.h>
+#include<string.h>
+
+using namespace std;
+int main()
+{
+    FILE *f1=fopen("input.txt","r");
+    FILE *f2=fopen("output.txt","w");
+    int i,j,pos;
+        int count=0;
+        char ch;
+        int begin=ftell(f1);
+        // GO TO END OF FILE
