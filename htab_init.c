@@ -9,7 +9,7 @@ htab_t *htab_init(size_t n) {
     }
     table->arr_size = n;
     table->size = 0;
-    for(int i = 0; i < n; i++) {
+    for(size_t i = 0; i < n; i++) {
         table->arr[i] = NULL;
     }
     return table;

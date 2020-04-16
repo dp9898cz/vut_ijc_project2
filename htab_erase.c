@@ -5,6 +5,7 @@
 void htab_erase(htab_t * t, htab_iterator_t it) {
     if (it.ptr == NULL) {
         //nemam co smazat, vratim se
+        it = htab_end(t);
         return;
     }
     struct htab_item *item = t->arr[it.idx]; //ukazatel na prvni polozku ve stejnem seznamu tabulky
@@ -23,6 +24,7 @@ void htab_erase(htab_t * t, htab_iterator_t it) {
         free(item);
 
         t->size--;
+        it = htab_end(t);
         return;
     }
     
@@ -44,10 +46,12 @@ void htab_erase(htab_t * t, htab_iterator_t it) {
             free(toDelete);
 
             t->size--;
+            it = htab_end(t);
             return;
         }
 
         //neni to ta spravna, posunu se dale
         item = item->next;
     }
+    it = htab_end(t);
 }

@@ -7,6 +7,7 @@
 
 #include <string.h>     // size_t
 #include <stdbool.h>    // bool
+#include <stdlib.h>     // malloc, free
 
 // Tabulka:
 struct htab;    // neúplná deklarace struktury - uživatel nevidí obsah

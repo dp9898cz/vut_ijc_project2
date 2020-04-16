@@ -1,0 +1,6 @@
+{
+    "files.associations": {
+        "htab.h": "c",
+        "htab_struct.h": "c"
+    }
+}
