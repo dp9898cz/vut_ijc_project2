@@ -6,9 +6,8 @@
     překladač: gcc (Ubuntu 7.5.0-3ubuntu1~18.04) 7.5.0
 */
 
-#include "htab.h"
-#include "htab_struct.h"
-
-htab_value_t htab_iterator_get_value(htab_iterator_t it) {
-    return it.ptr->data;
-}
+#include <ctype.h>
+#include <stdio.h>
+#include <string.h>
+#include <stdbool.h>
+int get_word(char *s, int max, FILE *f);
